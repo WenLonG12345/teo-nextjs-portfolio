@@ -5,14 +5,7 @@ import { useColorMode } from '@chakra-ui/color-mode';
 import { Text, Container, Flex, IconButton, HStack, Box, Button, Stack, Link } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import TopLink from './TopLink';
-
-const Links = [
-    { name: "Home", route: "/" },
-    { name: "About Me", route: "/about" },
-    { name: "Experience", route: "/experience" },
-    { name: "Projects", route: "/projects" },
-    { name: "Contact", route: "/contact" },
-]
+import { menuLinks } from '../constant';
 
 const NavBar = () => {
 
@@ -24,7 +17,7 @@ const NavBar = () => {
 
     const navItem = (
         <>
-            {Links.map((link) => (
+            {menuLinks.map((link) => (
                 <TopLink
                     href={link.route}
                     key={link.name}

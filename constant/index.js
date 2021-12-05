@@ -1,6 +1,14 @@
 import { SiKotlin, SiFirebase, SiFastlane, SiGmail} from 'react-icons/si';
 import { FaReact, FaJs, FaGitAlt, FaAndroid, FaJava, FaLinkedin, FaStackOverflow, FaMedium } from "react-icons/fa";
 
+const menuLinks = [
+    { name: "Home", route: "/" },
+    { name: "About Me", route: "/about" },
+    { name: "Experience", route: "/experience" },
+    { name: "Projects", route: "/projects" },
+    { name: "Contact", route: "/contact" },
+]
+
 const socialButtons = [
     {
         url: "https://www.linkedin.com/in/teo-wen-long-19960316/",
@@ -67,4 +75,4 @@ const techStacks = [
     },
 ]
 
-export {techStacks, socialButtons}
+export {menuLinks, techStacks, socialButtons}
