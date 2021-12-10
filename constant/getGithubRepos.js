@@ -1,9 +1,8 @@
 import React from 'react';
 import axios from "axios";
 
-const getGithubRepos = async (data) => {
+const getGithubRepos = async ({username}) => {
     try {
-        const { username } = data;
 
         const res = await axios.get(
             `https://api.github.com/users/${username}/repos?sort=created`,

@@ -1,15 +1,11 @@
 import { Container, Divider } from '@chakra-ui/react'
 import Head from 'next/head'
-import Image from 'next/image'
-import NavBar from '../components/NavBar'
 import ProfileSection from '../components/section/ProfileSection'
 import TechStackSection from '../components/section/TechStackSection'
-import getGithubRepos from '../constant/getGithubRepos'
+
 import styles from '../styles/Home.module.css'
 
-export default function Home({repositories}) {
-
-  console.log({repositories});
+export default function Home() {
 
   return (
     <div className={styles.container}>
@@ -33,16 +29,4 @@ export default function Home({repositories}) {
   )
 }
 
-export const getServerSideProps = async () => {
-  let data = {
-    username: process.env.GITHUB_USERNAME
-  }
 
-  const repositories = await getGithubRepos(data, token);
-
-  return {
-    props: {
-      repositories,
-    },
-  };
-}
