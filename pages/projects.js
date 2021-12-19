@@ -5,7 +5,8 @@ import getGithubRepos from '../constant/getGithubRepos'
 import styles from '../styles/Home.module.css'
 import getMediumArticles from '../constant/getMediumArticles';
 import MediumCard from '../components/MediumCard';
-import MediumSection from '../components/section/MediumSection';
+import MediumSection from '../section/MediumSection';
+import GithubSection from '../section/GithubSection';
 
 const Projects = ({ repos, articles }) => {
 
@@ -21,6 +22,7 @@ const Projects = ({ repos, articles }) => {
 
             <main>
                 <Container maxW="container.lg" mt={['5', '10']} mb={['5', '10']}>
+                    <GithubSection repos={repos}/>
                     <MediumSection articles={articles} />
                 </Container>
             </main>

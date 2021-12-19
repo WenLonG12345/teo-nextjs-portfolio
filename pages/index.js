@@ -1,8 +1,7 @@
 import { Container, Divider } from '@chakra-ui/react'
 import Head from 'next/head'
-import ProfileSection from '../components/section/ProfileSection'
-import TechStackSection from '../components/section/TechStackSection'
-
+import ProfileSection from '../section/ProfileSection';
+import TechStackSection from '../section/TechStackSection';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
           <Divider my={10} />
           <TechStackSection/>
           <Divider my={10} />
-          
         </Container>
 
       </main>

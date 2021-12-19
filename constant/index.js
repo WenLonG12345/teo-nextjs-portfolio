@@ -1,36 +1,60 @@
-import { SiKotlin, SiFirebase, SiFastlane, SiGmail} from 'react-icons/si';
-import { FaReact, FaJs, FaGitAlt, FaAndroid, FaJava, FaLinkedin, FaStackOverflow, FaMedium } from "react-icons/fa";
+import { SiKotlin, SiFirebase, SiFastlane, SiGmail } from 'react-icons/si';
+import { FaReact, FaJs, FaGitAlt, FaAndroid, FaJava, FaLinkedin, FaStackOverflow, FaMedium, FaGithub } from "react-icons/fa";
+import { CgAlbum } from "react-icons/cg";
+import { FiMail } from "react-icons/fi";
 
 const menuLinks = [
-    { name: "Home", route: "/" },
     { name: "About Me", route: "/about" },
     { name: "Experience", route: "/experience" },
     { name: "Projects", route: "/projects" },
     { name: "Contact", route: "/contact" },
 ]
 
-const socialButtons = [
-    {
-        url: "https://www.linkedin.com/in/teo-wen-long-19960316/",
-        icon: <FaLinkedin />,
-        name: "Linkedin"
-    },
-    {
-        url: "https://stackoverflow.com/users/12261890/teo",
-        icon: <FaStackOverflow />,
-        name: "StackOverflow"
-    },
-    {
-        url: "https://skynight1996.medium.com/",
-        icon: <FaMedium />,
-        name: "Medium"
-    },
-    {
-        url: "mailto:teowenlong0316@gmail.com",
-        icon: <SiGmail />,
-        name: "Gmail"
+const siteConfig = {
+    copyright: `Copyright © ${new Date().getFullYear()} Teo Wen Long. All Rights Reserved.`,
+    author: {
+        name: "Teo Wen Long",
+        accounts: [
+            {
+                url: "https://github.com/WenLonG12345",
+                icon: <FaGithub />,
+                name: "Github",
+                type: "gray"
+            },
+            {
+                url: "https://www.linkedin.com/in/teo-wen-long-19960316/",
+                icon: <FaLinkedin />,
+                name: "Linkedin",
+                type: "linkedin"
+            },
+            {
+                url: "https://stackoverflow.com/users/12261890/teo",
+                icon: <FaStackOverflow />,
+                name: "StackOverflow",
+                type: "orange"
+            },
+            {
+                url: "https://skynight1996.medium.com/",
+                icon: <FaMedium />,
+                name: "Medium",
+                type: "gray"
+            },
+            {
+                url: "mailto:teowenlong0316@gmail.com",
+                icon: <SiGmail />,
+                name: "Gmail",
+                type: "red"
+            }
+        ]
     }
-]
+}
+
+const resume = {
+    url: "https://drive.google.com/file/d/1uU61rGC1q_bxADdtqLvc1NPvH9GYDKbJ/view?usp=sharing",
+    icon: <CgAlbum  />,
+    name: "Resume"
+    ,
+}
 
 const techStacks = [
     {
@@ -75,4 +99,4 @@ const techStacks = [
     },
 ]
 
-export {menuLinks, techStacks, socialButtons}
+export { menuLinks, techStacks, siteConfig, resume }

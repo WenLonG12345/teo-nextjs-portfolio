@@ -5,13 +5,14 @@ const getGithubRepos = async ({username}) => {
     try {
 
         const res = await axios.get(
-            `https://api.github.com/users/${username}/repos?sort=created`,
+            `https://api.github.com/users/${username}/repos`,
         );
 
         let repos = res.data;
-        let latestSixRepos = repos.splice(0, 6);
-        return latestSixRepos;
-
+        // let latestSixRepos = repos.splice(0, 8);
+        // return latestSixRepos;
+        let result = repos?.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 8)
+        return result;
     } catch (err) {
         console.log(err);
     }
