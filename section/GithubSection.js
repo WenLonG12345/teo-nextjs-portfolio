@@ -22,7 +22,7 @@ const GithubSection = ({ repos }) => {
                             url={repo.clone_url}
                             stargazers_count={repo.stargazers_count}
                             forks_count={repo.forks_count}
-                            key={repo.title}
+                            key={repo.name}
                         />
                     ))}
                 </SimpleGrid>

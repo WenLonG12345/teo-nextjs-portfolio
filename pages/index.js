@@ -10,8 +10,9 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Teo | Home</title>
+        <meta property="og:title" content="Teo | Mobile Application Developer"></meta>
         <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/profile_picture.png" />
       </Head>
 
       <main>

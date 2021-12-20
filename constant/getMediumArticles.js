@@ -23,13 +23,14 @@ const getMediumArticles = async ({ username }) => {
 
         let { items } = data || {}
 
-        const article = items.map(({ title, thumbnail, link, pubDate, description }) => {
+        const article = items.map(({ title, thumbnail, guid, pubDate, description, categories }) => {
             return {
                 title: title,
                 thumbnail: thumbnail,
-                url: link,
+                url: guid,
                 date: moment(pubDate).format("YYYY - MMM DD"),
-                description: shortenDescription(description)
+                description: shortenDescription(description),
+                categories: categories
             }
         })
 

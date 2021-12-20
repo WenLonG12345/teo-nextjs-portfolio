@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideFade, Box, Heading, Avatar, Image, Link, Flex, LightMode, ButtonGroup, Button } from '@chakra-ui/react';
+import { SlideFade, Box, Heading, Avatar, Image, Link, Flex, LightMode, ButtonGroup, Button, useColorModeValue } from '@chakra-ui/react';
 import Paragraph from '../components/Paragraph';
 import { FaLinkedin, FaStackOverflow, FaMedium } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
@@ -28,17 +28,23 @@ const ProfileSection = () => {
                     </Flex>
                 </Flex>
                 <Paragraph fontSize="2xl" lineHeight={1.6}>
-                    Mobile Application Developer - {" "}
-                    <Link color="blue.500" href="https://www.android.com/" fontWeight="500" isExternal>
+                    Mobile Application Developer from Malaysia 🇲🇾
+                </Paragraph>
+                <Paragraph fontSize="2xl" lineHeight={1.6}>
+                    Focused on {" "}
+                    <Link color={useColorModeValue("blue.500", "blue.400")} href="https://www.android.com/" fontWeight="500" isExternal>
                         Android,
                     </Link>{" "}
-                    <Link color="blue.500" href="https://reactnative.dev/" fontWeight="500" isExternal>
+                    <Link color={useColorModeValue("blue.500", "blue.400")} href="https://www.apple.com/my/ios" fontWeight="500" isExternal>
+                        iOS &
+                    </Link>{" "}
+                    <Link color={useColorModeValue("blue.500", "blue.400")} href="https://reactnative.dev/" fontWeight="500" isExternal>
                         React Native
                     </Link>.
                     {"\n"}Passion in beautiful UI / UX & Tech Writter on {" "}
-                    <Link color="blue.500" href="https://skynight1996.medium.com/" fontWeight="500" isExternal>
+                    <Link color={useColorModeValue("blue.500", "blue.400")} href="https://skynight1996.medium.com/" fontWeight="500" isExternal>
                         Medium
-                    </Link>.
+                    </Link>. 🔥
                 </Paragraph>
 
                 <Box mt={5}>
@@ -47,9 +53,6 @@ const ProfileSection = () => {
                             <SocialButton
                                 social={resume}
                             />
-                            {/* {socialButtons.map((social) => (
-                                <SocialButton social={social} key={social.name}/>
-                            ))} */}
                         </ButtonGroup>
                     </LightMode>
                 </Box>

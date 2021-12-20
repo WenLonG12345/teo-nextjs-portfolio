@@ -36,7 +36,7 @@ const GithubCard = ({ name, description, language, url, stargazers_count, forks_
                             width="100%"
                             onClick={e => window.open(url)}
                         >
-                            <Tooltip hasArrow label="Github link" placement="top">
+                            <Tooltip hasArrow label={url} placement="top">
                                 <HStack cursor={"pointer"}>
                                     <Icon as={FiGithub} boxSize="0.9em" mt={"1px"} />
                                     <Text
@@ -44,13 +44,13 @@ const GithubCard = ({ name, description, language, url, stargazers_count, forks_
                                         noOfLines={1}
                                         fontWeight="600"
                                         align="left"
-                                        color={"blue.500"}
+                                        color={"blue.400"}
                                     >
                                         {name}
                                     </Text>
                                 </HStack>
                             </Tooltip>
-                            <HStack cursor={"pointer"} onClick={e => handleLinkClick(e, url)}>
+                            <HStack>
                                 {forks_count && (
                                     <Box _hover={{ color: "blue.500" }}>
                                         <Icon as={BiGitRepoForked} boxSize="0.9em" mt={"1px"} />

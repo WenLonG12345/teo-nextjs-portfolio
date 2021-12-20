@@ -1,16 +1,29 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
+import {
+    Text,
+    Container,
+    Flex,
+    IconButton,
+    HStack,
+    Box,
+    Button,
+    Stack,
+    Link as CharkaLink,
+    useColorModeValue,
+    Avatar
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { useRouter } from "next/router";
 import { useDisclosure } from '@chakra-ui/hooks';
 import { useColorMode } from '@chakra-ui/color-mode';
-import { Text, Container, Flex, IconButton, HStack, Box, Button, Stack, Link } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import TopLink from './TopLink';
 import { menuLinks } from '../constant';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 const NavBar = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const { colorMode, toggleColorMode } = useColorMode();
 
     let router = useRouter();
     let { asPath } = router;
@@ -18,50 +31,82 @@ const NavBar = () => {
     const navItem = (
         <>
             {menuLinks.map((link) => (
-                <TopLink
+                <NextLink
                     href={link.route}
                     key={link.name}
-                    p={2}
-                    rounded={"md"}
-                    currentPath={asPath}
+                    passHref
                 >
-                    {link.name}
-                </TopLink>
+                    <CharkaLink
+                        href={link.route}
+                        px={2}
+                        py={1}
+                        rounded={"md"}
+                        _hover={{
+                          textDecoration: "none",
+                          bg: useColorModeValue("gray.200", "gray.900")
+                        }}
+                        color={link.route === asPath && useColorModeValue("blue.500", "blue.300")}
+                        onClick={isOpen ? onClose : onOpen}
+                    >
+                        {link.name}
+                    </CharkaLink>
+                </NextLink>
             ))}
         </>
     )
 
     return (
-        <Box py={5} borderTop="2px" borderTopColor="blue.600">
-            <Container maxW="container.lg">
-                <Flex h={16} alignItems="center" justifyContent="space-between">
+        <>
+            <Box bg={useColorModeValue('white', 'gray.700')} px={4} boxShadow={'lg'}>
+                <Flex
+                    h={16}
+                    alignItems={"center"}
+                    justifyContent={"space-between"}
+                    w={["95%", "95%", "95%"]}
+                    maxW={'container.lg'}
+                    mx="auto"
+                >
                     <IconButton
-                        size="md"
+                        size={"md"}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                        aria-label="Open Menu"
-                        display={{ md: !isOpen ? "none" : "inherit" }}
+                        aria-label={"Open Menu"}
+                        display={["inherit", "inherit", "none"]}
                         onClick={isOpen ? onClose : onOpen}
                     />
-                    <HStack spacing={8} alignItems="center">
-                        <HStack as="nav" spacing="4" display={{ base: 'none', md: 'flex' }}>
-                            {navItem}
+                    <HStack spacing={8} alignItems={'center'}>
+                        <Avatar
+                            as={CharkaLink}
+                            size='sm'
+                            href="/"
+                            src="/profile_picture.png"
+                        />
+                        <HStack spacing={8} alignItems="center">
+                            <HStack as="nav" spacing="4" display={{ base: 'none', md: 'flex' }}>
+                                {navItem}
+                            </HStack>
                         </HStack>
                     </HStack>
                     <Flex alignItems={"center"}>
-                        <Button aria-label="Switch Theme" onClick={toggleColorMode}>
-                            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                        </Button>
+                        <ColorModeSwitcher justifySelf="flex-end" />
                     </Flex>
                 </Flex>
+
+
                 {isOpen && (
-                    <Box pb={4} mt={3}>
-                        <Stack as={"nav"} spacing={3}>
+                    <Box
+                        pb={4}
+                        w={["100%", "100%", "80%"]}
+                        maxW={'container.lg'}
+                        display={["inherit", "inherit", "none"]}
+                    >
+                        <Stack as={"nav"} spacing={4}>
                             {navItem}
                         </Stack>
                     </Box>
                 )}
-            </Container>
-        </Box>
+
+            </Box>
+        </>
     )
 }
 

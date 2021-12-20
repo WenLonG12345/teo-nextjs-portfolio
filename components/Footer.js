@@ -35,7 +35,6 @@ const Footer = () => {
             justifyContent={["center", "space-between"]}
             alignItems="center"
             w="100%"
-            ju
           >
             <Text
               textAlign="center"

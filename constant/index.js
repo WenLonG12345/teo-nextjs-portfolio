@@ -51,9 +51,8 @@ const siteConfig = {
 
 const resume = {
     url: "https://drive.google.com/file/d/1uU61rGC1q_bxADdtqLvc1NPvH9GYDKbJ/view?usp=sharing",
-    icon: <CgAlbum  />,
+    icon: <CgAlbum />,
     name: "Resume"
-    ,
 }
 
 const techStacks = [
@@ -99,4 +98,47 @@ const techStacks = [
     },
 ]
 
-export { menuLinks, techStacks, siteConfig, resume }
+const companies = [
+    {
+        title: "Qumon Intelligence",
+        alt: "qumon image",
+        url: 'https://www.qumonintelligence.com/',
+        role: "Mobile Application Developer",
+        skills: ["Kotlin", "Java", "Android", "Javascript", "React", "React Native"],
+        period: "Aug 2020 - Present",
+        logo: '/qumon.png'
+    },
+    {
+        title: "TimeTec Cloud Sdn Bhd",
+        alt: "timetec image",
+        url: "https://www.timeteccloud.com/",
+        role: "Mobile Application Developer Intern",
+        skills: ["Java", "Android", "C#", "Appium Automation Testing","AWS"],
+        period: "Jul 2019 - Jan 2020",
+        logo: '/timetec.png'
+    }
+]
+
+const educations = [
+    {
+        title: "University Technology Malaysia (UTM)",
+        alt: "utm image",
+        url: 'https://www.utm.my/',
+        role: "Bachelor's Degree in Computer Science (Network and Security)",
+        skills: ["CGPA - 3.79", "CCNA", "Security Management", "Network Security"],
+        period: "Sept 2016 - Sept 2020",
+        logo: '/utm.png'
+    },
+    {
+        title: "SMK Mentakab",
+        alt: "smk image",
+        url: 'https://www.facebook.com/pages/category/College---university/Sekolah-Menengah-Kebangsaan-Mentakab-224802077565350/',
+        role: "STPM - Science Stream (Physics)",
+        skills: ["CGPA - 3.33", "Math T", "Physics", "Chemistry"],
+        period: "Jan 2015 - Jun 2016",
+        logo: '/smk.png'
+    },
+
+]
+
+export { menuLinks, techStacks, siteConfig, resume, companies, educations }
