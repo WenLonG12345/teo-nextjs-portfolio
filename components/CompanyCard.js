@@ -53,8 +53,8 @@ const CompanyCard = ({ title, role, skills, period, logo, alt, url, colorMode })
                             <Stack
                                 spacing={1}
                                 mt={3}
-                                isInline
                                 alignItems="center"
+                                isInline
                                 display={["none", "none", "flex", "flex"]}
                             >
                                 {skills.map(skill => (
@@ -74,7 +74,6 @@ const CompanyCard = ({ title, role, skills, period, logo, alt, url, colorMode })
                 <Stack
                     spacing={1}
                     mt={3}
-                    isInline
                     alignItems="center"
                     display={["flex", "flex", "none", "none"]}
                 >

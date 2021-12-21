@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi";
 
 const menuLinks = [
     { name: "About Me", route: "/about" },
-    { name: "Experience", route: "/experience" },
+    // { name: "Experience", route: "/experience" },
     { name: "Projects", route: "/projects" },
     { name: "Contact", route: "/contact" },
 ]
