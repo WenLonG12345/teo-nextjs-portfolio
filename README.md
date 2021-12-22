@@ -1,10 +1,10 @@
 This is my personal portfolio website. [Teo](https://teo-nextjs-portfolio.vercel.app/)
 
 ## Features
-- Home - Resume & Tech Stack
-- About - Working Experience & Education
-- Projects - Github Repos & Medium Articles
-- Contact - Drop me an email! ✉️
+- **Home** - Resume & Tech Stack
+- **About** - Working Experience & Education
+- **Projects** - Github Repos & Medium Articles
+- **Contact** - Drop me an email! ✉️
 
 ## Built with
 - [NextJS](https://nextjs.org/)
