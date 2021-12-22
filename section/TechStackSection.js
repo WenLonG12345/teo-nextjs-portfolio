@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, SlideFade, Grid } from "@chakra-ui/react";
+import { Heading, SlideFade, Grid, Text, useColorModeValue } from "@chakra-ui/react";
 import StackCard from '../components/StackCard';
 import { techStacks } from '../constant';
 
@@ -11,10 +11,11 @@ const TechStackSection = () => {
                 fontSize={{ base: "24px", md: "30px", lg: "36px" }}
                 mb={3}
             >
-                Tech Stack & Languages
+                Tech Stack
             </Heading>
+            <Text textColor={useColorModeValue("gray.600", "gray.400")} fontSize={'lg'}>A list of my favorite tools and technologies that I use on a regular basis.</Text>
             <Grid
-                mt={10}
+                mt={5}
                 templateColumns={["1fr", "repeat(2,1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]}
                 gap={5}
             >
