@@ -6,7 +6,9 @@ import { FiMail } from "react-icons/fi";
 const menuLinks = [
     { name: "About Me", route: "/about" },
     // { name: "Experience", route: "/experience" },
-    { name: "Projects", route: "/projects" },
+    // { name: "Projects", route: "/projects" },
+    { name: 'Github', route: '/github' },
+    { name: 'Articles', route: '/article' },
     { name: "Contact", route: "/contact" },
 ]
 
@@ -113,7 +115,7 @@ const companies = [
         alt: "timetec image",
         url: "https://www.timeteccloud.com/",
         role: "Mobile Application Developer Intern",
-        skills: ["Java", "Android", "C#", "Appium Automation Testing","AWS"],
+        skills: ["Java", "Android", "C#", "Appium Automation Testing", "AWS"],
         period: "Jul 2019 - Jan 2020",
         logo: '/timetec.png'
     }
@@ -138,7 +140,27 @@ const educations = [
         period: "Jan 2015 - Jun 2016",
         logo: '/smk.png'
     },
-
 ]
 
-export { menuLinks, techStacks, siteConfig, resume, companies, educations }
+const liveProjects = [
+    {
+        name: 'Chativo',
+        imageUrl: 'https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw',
+        alt: 'chativo',
+        summary: 'Enterprise ready live-chat base customer support & engagement software',
+        playstore: 'https://play.google.com/store/apps/details?id=io.chativo.chat',
+        appstore: 'https://apps.apple.com/us/app/chativo/id1545295884'
+    },
+    {
+        name: 'ChativoV',
+        imageUrl: 'https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw',
+        alt: 'chativo-v',
+        summary: 'Live-chat specifically designed for visitors to communicate with real-time agent instantly',
+        playstore: 'https://play.google.com/store/apps/details?id=io.chativo.visitor',
+        appstore: 'https://apps.apple.com/us/app/chativov/id1595519177'
+    }
+]
+
+
+
+export { menuLinks, techStacks, siteConfig, resume, companies, educations, liveProjects }

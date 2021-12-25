@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Heading, SlideFade, Box, SimpleGrid } from "@chakra-ui/react";
+import { Heading, SlideFade, Box, SimpleGrid, Text } from "@chakra-ui/react";
 import GithubCard from '../components/GithubCard';
+import Paragraph from '../components/Paragraph';
 
 const GithubSection = ({ repos }) => {
     return (
@@ -12,6 +14,10 @@ const GithubSection = ({ repos }) => {
             >
                 Github
             </Heading>
+            <Paragraph>
+                <Text>List of my top featured github repositories. 🔖</Text>
+                <Text>Feel free to pay a visit and don't forget to leave me a star! ⭐ </Text>
+            </Paragraph>
             <Box my={5}>
                 <SimpleGrid columns={[1, 1, 2]} spacing={4} mt={4}>
                     {repos.map((repo) => (

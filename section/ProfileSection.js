@@ -4,7 +4,8 @@ import Paragraph from '../components/Paragraph';
 import { FaLinkedin, FaStackOverflow, FaMedium } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { socialButtons, resume } from '../constant';
-import SocialButton from '../components/SocialButton'
+import SocialButton from '../components/SocialButton';
+import {BiPhoneCall} from 'react-icons/bi';
 
 const ProfileSection = () => {
     return (
@@ -53,7 +54,18 @@ const ProfileSection = () => {
                             <SocialButton
                                 social={resume}
                             />
+                            <Link href={'/contact'} style={{ textDecoration: 'none' }}>
+                                <Button
+                                    colorScheme="blue"
+                                    size='sm'
+                                    margin={'5px'}
+                                    leftIcon={<BiPhoneCall color='white'/>}
+                                >
+                                    Contact Me
+                                </Button>
+                            </Link>
                         </ButtonGroup>
+
                     </LightMode>
                 </Box>
             </Box>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Heading, SlideFade, Box } from "@chakra-ui/react";
+import { Heading, SlideFade, Box, Text } from "@chakra-ui/react";
 import MediumCard from '../components/MediumCard';
+import Paragraph from '../components/Paragraph';
 
 const MediumSection = ({articles}) => {
     return (
@@ -10,8 +11,12 @@ const MediumSection = ({articles}) => {
                 fontSize={{ base: "24px", md: "30px", lg: "36px" }}
                 mb={3}
             >
-                Stories on Medium
+                Articles on Medium
             </Heading>
+            <Paragraph>
+                <Text>List of articles related to all my tech knowledge sharing to the public. 📖</Text>
+                <Text>Stay tuned for more articles.</Text>
+            </Paragraph>
             <Box
                 my={5}
             >

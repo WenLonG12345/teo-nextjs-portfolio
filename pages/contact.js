@@ -77,7 +77,7 @@ const Contact = () => {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Contact</title>
+                <title>Teo | Contact</title>
                 <meta name="description" content="Teo | Mobile Application Developer" />
                 <link rel="icon" href="/profile_picture.png" />
             </Head>

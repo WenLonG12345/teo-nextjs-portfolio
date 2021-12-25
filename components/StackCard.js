@@ -33,7 +33,6 @@ const StackCard = ({ stack }) => {
                     <LinkOverlay href={stack?.url} rel="noopener" isExternal>
                         <Flex>
                             <Text
-                           
                                 size="sm"
                                 _hover={{ color: "blue.500" }}
                             >{stack?.name}</Text>

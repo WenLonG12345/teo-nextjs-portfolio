@@ -26,7 +26,7 @@ const GithubCard = ({ name, description, language, url, stargazers_count, forks_
                 rounded="xl"
                 borderWidth="1px"
                 bg={useColorModeValue("white", "gray.800")}
-                borderColor={useColorModeValue("gray.100", "gray.700")}
+                borderColor={useColorModeValue("gray.300", "gray.700")}
                 _hover={{ borderColor: "blue.500" }}
             >
                 <VStack overflow="hidden" align="start" spacing={1}>
@@ -82,7 +82,7 @@ const GithubCard = ({ name, description, language, url, stargazers_count, forks_
                         )}
                     </VStack>
                     <Box>
-                        <Text color="gray.500" fontSize="sm" noOfLines={2} textAlign="left">
+                        <Text fontSize="sm" noOfLines={2} textAlign="left">
                             {description}
                         </Text>
                     </Box>{" "}

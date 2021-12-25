@@ -79,6 +79,7 @@ const NavBar = () => {
                             size='sm'
                             href="/"
                             src="/profile_picture.png"
+                            _hover={{ borderColor: "blue.500" }}
                         />
                         <HStack spacing={8} alignItems="center">
                             <HStack as="nav" spacing="4" display={{ base: 'none', md: 'flex' }}>

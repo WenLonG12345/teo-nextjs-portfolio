@@ -33,7 +33,7 @@ const Projects = ({ repos, articles }) => {
 export default Projects;
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const repos = await getGithubRepos({ username: process.env.GITHUB_USERNAME });
     const articles = await getMediumArticles({ username: process.env.MEDIUM_USERNAME })
 
