@@ -42,8 +42,8 @@ const NavBar = () => {
                         py={1}
                         rounded={"md"}
                         _hover={{
-                          textDecoration: "none",
-                          bg: useColorModeValue("gray.200", "gray.900")
+                            textDecoration: "none",
+                            bg: useColorModeValue("gray.200", "gray.900")
                         }}
                         color={link.route === asPath && useColorModeValue("blue.500", "blue.300")}
                         onClick={isOpen ? onClose : onOpen}
@@ -81,10 +81,8 @@ const NavBar = () => {
                             src="/profile_picture.png"
                             _hover={{ borderColor: "blue.500" }}
                         />
-                        <HStack spacing={8} alignItems="center">
-                            <HStack as="nav" spacing="4" display={{ base: 'none', md: 'flex' }}>
-                                {navItem}
-                            </HStack>
+                        <HStack as="nav" spacing="4" display={{ base: 'none', md: 'flex' }}>
+                            {navItem}
                         </HStack>
                     </HStack>
                     <Flex alignItems={"center"}>
