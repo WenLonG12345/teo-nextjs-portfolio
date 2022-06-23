@@ -5,21 +5,20 @@ import MediumSection from '../section/MediumSection';
 import styles from '../styles/Home.module.css'
 import getMediumArticles from '../constant/getMediumArticles';
 
-const Article = ({articles}) => {
+const Article = ({ articles }) => {
     return (
         <div className={styles.container}>
-        <Head>
-            <title>Teo | Articles</title>
-            <meta name="description" content="Teo | Mobile Application Developer" />
-            <link rel="icon" href="/profile_picture.png" />
-        </Head>
-
-        <main>
-            <Container maxW="container.lg" mt={['5', '10']} mb={['5', '10']}>
-                <MediumSection articles={articles} />
-            </Container>
-        </main>
-    </div>
+            <Head>
+                <title>Teo | Articles</title>
+                <meta name="description" content="Teo | Mobile Application Developer" />
+                <link rel="icon" href="/profile_picture.png" />
+            </Head>
+            <main>
+                <Container maxW="container.lg" mt={['5', '10']} mb={['5', '10']}>
+                    <MediumSection articles={articles} />
+                </Container>
+            </main>
+        </div>
     )
 }
 

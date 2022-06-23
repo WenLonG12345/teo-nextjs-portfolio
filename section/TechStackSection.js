@@ -17,7 +17,7 @@ const TechStackSection = () => {
             <Grid
                 mt={5}
                 templateColumns={["1fr", "repeat(2,1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]}
-                gap={[2,5,5,5]}
+                gap={[2, 5, 5, 5]}
             >
                 {techStacks.map((stack) => (
                     <StackCard stack={stack} key={stack?.name} />
