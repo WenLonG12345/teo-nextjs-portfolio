@@ -1,5 +1,3 @@
-This is my personal portfolio website. [Teo](https://teo-nextjs-portfolio.vercel.app/)
-
 ## Features
 - **Home** - Resume & Tech Stack
 - **About** - Working Experience & Education
