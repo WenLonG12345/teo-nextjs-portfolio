@@ -16,15 +16,19 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^5.5.5",
     "moment": "^2.29.1",
-    "next": "12.0.7",
+    "next": "13.0.6",
     "querystring": "^0.2.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-icons": "^4.3.1",
-    "swr": "^1.1.1"
+    "swr": "^1.1.1",
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "eslint": "8.4.0",
-    "eslint-config-next": "12.0.7"
+    "@types/node": "18.11.13",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6"
   }
 }
