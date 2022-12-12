@@ -32,10 +32,10 @@ const SpotifySection: React.FC<ISpotifySection> = ({ song }) => {
           borderColor: "blue.500",
         }}
         borderColor={useColorModeValue("gray.300", "gray.700")}
-        href={song?.isPlaying ? song.songUrl : null}
+        // href={song?.isPlaying ? song.songUrl : null}
       >
         <LinkOverlay
-          href={song?.isPlaying ? song?.songUrl : ""}
+        //   href={song?.isPlaying ? song?.songUrl : ""}
           rel="noopener"
           isExternal
         >

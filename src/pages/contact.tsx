@@ -136,7 +136,6 @@ const Contact = () => {
                       <FormLabel key={"message"}>Message</FormLabel>
                       <Textarea
                         id="message"
-                        type={"text"}
                         value={message}
                         placeholder="Type your message..."
                         size="lg"

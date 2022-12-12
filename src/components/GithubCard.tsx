@@ -24,7 +24,6 @@ const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
   return (
     <MotionBox whileHover={{ y: -5 }}>
       <LinkBox
-        size="xl"
         py={2}
         px={[2, 4]}
         mt={2}
