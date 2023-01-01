@@ -3,6 +3,6 @@ export type Project = {
   imageUrl: string;
   alt: string;
   summary: string;
-  playstore: string;
-  appstore: string;
+  link?: string;
+  tech: string[];
 };

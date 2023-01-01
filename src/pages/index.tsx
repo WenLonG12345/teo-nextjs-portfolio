@@ -1,11 +1,10 @@
 import { Container, Divider } from "@chakra-ui/react";
-import Head from "next/head";
-import { LiveProjectSection } from "../section/LiveProjectSection";
-import ProfileSection from "../section/ProfileSection";
-import SpotifySection from "../section/SpotifySection";
-import TechStackSection from "../section/TechStackSection";
+import ProfileSection from "../components/section/ProfileSection";
+import TechStackSection from "../components/section/TechStackSection";
 import styles from "../../styles/Home.module.css";
 import useSWR from "swr";
+import Meta from "../components/Meta";
+import { SideProjectSection } from "../components/section/SideProjectSection";
 
 export default function Home() {
   const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -13,23 +12,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Teo | Home</title>
-        <meta
-          property="og:title"
-          content="Teo | Mobile Application Developer"
-        ></meta>
-        <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/profile_picture.png" />
-      </Head>
-
+      <Meta />
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
           <ProfileSection song={data} />
-          <Divider my={7} />
+          <Divider my={10} />
           <TechStackSection />
-          <Divider my={7} />
-          <LiveProjectSection />
+          <Divider my={10} />
+          <SideProjectSection />
         </Container>
       </main>
     </div>

@@ -3,7 +3,7 @@ import { Container, Divider } from "@chakra-ui/react";
 import Head from "next/head";
 import getGithubRepos from "../constant/getGithubRepos";
 import styles from "../../styles/Home.module.css";
-import GithubSection from "../section/GithubSection";
+import GithubSection from "../components/section/GithubSection";
 import { GitRepo } from "../types/gitRepo";
 
 interface IGithubPage {

@@ -10,10 +10,10 @@ import {
   useColorModeValue,
   HStack,
 } from "@chakra-ui/react";
-import { MotionBox } from "../utils/motion";
-import Paragraph from "../components/Paragraph";
+import { MotionBox } from "../../utils/motion";
+import Paragraph from "../Paragraph";
 import { SiSpotify } from "react-icons/si";
-import { SpotifySong } from "../types/spotify";
+import { SpotifySong } from "../../types/spotify";
 
 interface ISpotifySection {
   song: SpotifySong;
@@ -35,7 +35,7 @@ const SpotifySection: React.FC<ISpotifySection> = ({ song }) => {
         // href={song?.isPlaying ? song.songUrl : null}
       >
         <LinkOverlay
-        //   href={song?.isPlaying ? song?.songUrl : ""}
+          //   href={song?.isPlaying ? song?.songUrl : ""}
           rel="noopener"
           isExternal
         >

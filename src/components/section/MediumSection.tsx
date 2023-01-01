@@ -1,8 +1,8 @@
 import React from "react";
 import { Heading, SlideFade, Box, Text } from "@chakra-ui/react";
-import MediumCard from "../components/MediumCard";
-import Paragraph from "../components/Paragraph";
-import { Article } from "../types/article";
+import MediumCard from "../MediumCard";
+import Paragraph from "../Paragraph";
+import { Article } from "../../types/article";
 
 interface IMediumSection {
   articles: Article[];

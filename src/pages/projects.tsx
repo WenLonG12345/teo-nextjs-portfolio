@@ -5,8 +5,8 @@ import getGithubRepos from "../constant/getGithubRepos";
 import styles from "../../styles/Home.module.css";
 import getMediumArticles from "../constant/getMediumArticles";
 import MediumCard from "../components/MediumCard";
-import MediumSection from "../section/MediumSection";
-import GithubSection from "../section/GithubSection";
+import MediumSection from "../components/section/MediumSection";
+import GithubSection from "../components/section/GithubSection";
 import { GitRepo } from "../types/gitRepo";
 import { Article } from "../types/article";
 

@@ -1,4 +1,13 @@
-import { SiKotlin, SiFirebase, SiFastlane, SiGmail } from "react-icons/si";
+import {
+  SiKotlin,
+  SiFirebase,
+  SiFastlane,
+  SiGmail,
+  SiTypescript,
+  SiTailwindcss,
+  SiAntdesign,
+  SiRedux,
+} from "react-icons/si";
 import {
   FaReact,
   FaJs,
@@ -9,9 +18,10 @@ import {
   FaStackOverflow,
   FaMedium,
   FaGithub,
+  FaSass,
 } from "react-icons/fa";
 import { CgAlbum } from "react-icons/cg";
-import { FiMail } from "react-icons/fi";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const menuLinks = [
   { name: "About Me", route: "/about" },
@@ -67,7 +77,7 @@ const resume = {
   name: "Resume",
 };
 
-const techStacks = [
+const mobileTechStacks = [
   {
     name: "Android",
     icon: <FaAndroid fontSize="20px" />,
@@ -88,10 +98,56 @@ const techStacks = [
     icon: <FaJava fontSize="20px" />,
     url: "https://www.java.com/en/",
   },
+];
+
+const webTechStacks = [
+  {
+    name: "React",
+    icon: <FaReact fontSize="20px" />,
+    url: "https://reactnative.dev/",
+  },
+  {
+    name: "NextJS",
+    icon: <TbBrandNextjs fontSize="20px" />,
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "Typescript",
+    icon: <SiTypescript fontSize="20px" />,
+    url: "https://www.typescriptlang.org/",
+  },
   {
     name: "Javascript",
     icon: <FaJs fontSize="20px" />,
     url: "https://www.javascript.com/",
+  },
+  {
+    name: "Redux & Redux Saga",
+    icon: <SiRedux fontSize="20px" />,
+    url: "https://redux.js.org/",
+  },
+  {
+    name: "TailwindCSS",
+    icon: <SiTailwindcss fontSize="20px" />,
+    url: "https://tailwindcss.com/",
+  },
+  {
+    name: "Ant Design",
+    icon: <SiAntdesign fontSize="20px" />,
+    url: "https://ant.design/",
+  },
+  {
+    name: "SASS",
+    icon: <FaSass fontSize="20px" />,
+    url: "https://sass-lang.com/",
+  },
+];
+
+const otherTechStacks = [
+  {
+    name: "CI/CD - Fastlane",
+    icon: <SiFastlane fontSize="20px" />,
+    url: "https://fastlane.tools/",
   },
   {
     name: "Firebase",
@@ -103,19 +159,23 @@ const techStacks = [
     icon: <FaGitAlt fontSize="20px" />,
     url: "https://www.gitlab.com/",
   },
-  {
-    name: "CI/CD - Fastlane",
-    icon: <SiFastlane fontSize="20px" />,
-    url: "https://fastlane.tools/",
-  },
 ];
 
 const companies = [
   {
+    title: "Astro",
+    alt: "astro image",
+    url: "https://www.astro.com.my/",
+    role: "Assiociate Frontend Engineer",
+    skills: ["React", "Sass", "Redux", "Redux Saga", "StorybookJS"],
+    period: "Oct 2022 - Present",
+    logo: "/astro.png",
+  },
+  {
     title: "Qumon Intelligence",
     alt: "qumon image",
     url: "https://www.qumonintelligence.com/",
-    role: "Mobile Application Developer",
+    role: "Software Engineer",
     skills: [
       "Kotlin",
       "Java",
@@ -124,7 +184,7 @@ const companies = [
       "React",
       "React Native",
     ],
-    period: "Aug 2020 - Present",
+    period: "Aug 2020 - Sept 2022",
     logo: "/qumon.png",
   },
   {
@@ -159,36 +219,54 @@ const educations = [
   },
 ];
 
-const liveProjects = [
+const sideProjects = [
   {
-    name: "Chativo",
-    imageUrl:
-      "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
-    alt: "chativo",
+    name: "3CommasClub NFT",
+    imageUrl: "/3commas.png",
+    alt: "3commasclub",
     summary:
-      "Enterprise ready live-chat base customer support & engagement software",
-    playstore: "https://play.google.com/store/apps/details?id=io.chativo.chat",
-    appstore: "https://apps.apple.com/us/app/chativo/id1545295884",
+      "NFC business card builder linked with unique NFT. Build business profile embed with NFC that allows others to scan and connect.",
+    link: "https://nextjs-3commasclub-frontend.vercel.app/",
+    tech: [
+      'NextJS',
+      "ChakraUI",
+      "Ant Design",
+      "Ant Design Pro"
+    ]
   },
   {
-    name: "ChativoV",
-    imageUrl:
-      "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
-    alt: "chativo-v",
-    summary:
-      "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
-    playstore:
-      "https://play.google.com/store/apps/details?id=io.chativo.visitor",
-    appstore: "https://apps.apple.com/us/app/chativov/id1595519177",
+    name: "KlusterX Player Portal",
+    imageUrl: "/klusterx_player.png",
+    alt: "klusterx",
+    summary: "Online Casino Player Portal, built with NextJS, TailwindCSS and MantineUI",
+    tech: [
+      'NextJS',
+      "TailwindCSS",
+      "MantineUI",
+      "Zustand"
+    ]
+  },
+  {
+    name: "KlusterX Tenant Portal",
+    imageUrl: "/klusterx_tenant.png",
+    alt: "klusterx",
+    summary: "Online Casino Tenant Portal, built with Ant Design Pro",
+    tech: [
+      "UmiJS",
+      "Ant Design",
+      "Ant Design Pro"
+    ]
   },
 ];
 
 export {
   menuLinks,
-  techStacks,
+  webTechStacks,
+  mobileTechStacks,
+  otherTechStacks,
   siteConfig,
   resume,
   companies,
   educations,
-  liveProjects,
+  sideProjects,
 };

@@ -2,11 +2,11 @@ import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-interface ILayout {
+interface IMainLayout {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<ILayout> = ({ children }) => {
+const MainLayout: React.FC<IMainLayout> = ({ children }) => {
   return (
     <>
       <NavBar />
@@ -16,4 +16,4 @@ const Layout: React.FC<ILayout> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default MainLayout;

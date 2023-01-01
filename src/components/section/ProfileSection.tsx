@@ -12,12 +12,12 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Paragraph from "../components/Paragraph";
-import { resume } from "../constant";
-import SocialButton from "../components/SocialButton";
+import Paragraph from "../Paragraph";
+import { resume } from "../../constant";
+import SocialButton from "../SocialButton";
 import { BiPhoneCall } from "react-icons/bi";
 import SpotifySection from "./SpotifySection";
-import { SpotifySong } from "../types/spotify";
+import { SpotifySong } from "../../types/spotify";
 
 interface IProfileSection {
   song: SpotifySong;
@@ -25,7 +25,7 @@ interface IProfileSection {
 
 const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
   return (
-    <SlideFade in offsetX={80}>
+    <SlideFade in offsetY={80}>
       <Box>
         <Flex alignItems="center" justifyContent="space-between">
           <Heading
@@ -33,7 +33,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
             fontSize={{ base: "28px", md: "40px", lg: "48px" }}
             mb={3}
           >
-            Hey, I am Wen LonG! <span className="waving-hand">👋</span>
+            Hey, I am Teo! <span className="waving-hand">👋</span>
           </Heading>
           <Flex alignItems={"flex-end"}>
             <Avatar
@@ -45,7 +45,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
           </Flex>
         </Flex>
         <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6 }}>
-          Mobile Application Developer from Malaysia 🇲🇾
+          Frontend Developer from Malaysia 🇲🇾
         </Paragraph>
         <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6 }}>
           Focused on{" "}
@@ -55,23 +55,16 @@ const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
             fontWeight="500"
             isExternal
           >
-            Android,
-          </Link>{" "}
-          <Link
-            color={useColorModeValue("blue.500", "blue.400")}
-            href="https://www.apple.com/my/ios"
-            fontWeight="500"
-            isExternal
-          >
-            iOS &
-          </Link>{" "}
+            Web
+          </Link>
+          {" & "}
           <Link
             color={useColorModeValue("blue.500", "blue.400")}
             href="https://reactnative.dev/"
             fontWeight="500"
             isExternal
           >
-            React Native
+            Mobile Development (Android & iOS)
           </Link>
           .{"\n"}Passion in beautiful UI / UX & Tech Writter on{" "}
           <Link
@@ -93,7 +86,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
                 colorScheme="blue"
                 size="sm"
                 margin={"5px"}
-                leftIcon={<BiPhoneCall color="white" />}
+                leftIcon={<BiPhoneCall />}
               >
                 Contact Me
               </Button>

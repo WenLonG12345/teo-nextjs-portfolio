@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { Heading, SlideFade, Box, SimpleGrid, Text } from "@chakra-ui/react";
-import GithubCard from "../components/GithubCard";
-import Paragraph from "../components/Paragraph";
-import { GitRepo } from "../types/gitRepo";
+import GithubCard from "../GithubCard";
+import Paragraph from "../Paragraph";
+import { GitRepo } from "../../types/gitRepo";
 
 interface IGithubSection {
   repos: GitRepo[];
@@ -11,7 +11,7 @@ interface IGithubSection {
 
 const GithubSection: React.FC<IGithubSection> = ({ repos }) => {
   if (!repos) return <></>;
-  console.log({repos});
+  console.log({ repos });
   return (
     <SlideFade in offsetY={80} delay={0.2}>
       <Heading

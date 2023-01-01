@@ -3,7 +3,7 @@ import { Container, Divider } from "@chakra-ui/react";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import getMediumArticles from "../constant/getMediumArticles";
-import MediumSection from "../section/MediumSection";
+import MediumSection from "../components/section/MediumSection";
 import { Article } from "../types/article";
 
 interface IArticlePage {

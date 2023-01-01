@@ -40,8 +40,18 @@ const NavBar = () => {
               textDecoration: "none",
               bg: useColorModeValue("gray.200", "gray.900"),
             }}
-            color={link.route === asPath ? useColorModeValue("blue.500", "blue.300"): "blue.500"}
+            bg={
+              link.route === asPath
+                ? useColorModeValue("gray.200", "gray.900")
+                : "none"
+            }
+            color={
+              link.route === asPath
+                ? useColorModeValue("blue.500", "white")
+                : useColorModeValue("black", "white")
+            }
             onClick={isOpen ? onClose : onOpen}
+            fontWeight='medium'
           >
             {link.name}
           </CharkaLink>
