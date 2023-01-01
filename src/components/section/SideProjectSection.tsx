@@ -24,7 +24,7 @@ export const SideProjectSection: React.FC<ILiveProjectSection> = ({
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
         mb={3}
       >
-        Side Project
+        Projects
       </Heading>
       <Text
         textColor={useColorModeValue("gray.600", "gray.400")}

@@ -257,6 +257,33 @@ const sideProjects = [
       "Ant Design Pro"
     ]
   },
+  {
+    name: "Chativo",
+    imageUrl: "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
+    alt: "chativo",
+    summary: "Enterprise ready live-chat base customer support & engagement software",
+    tech: [
+      "Android",
+      "Kotlin",
+      "Android Jetpack",
+      "Coroutine Flow",
+    ],
+    link: "https://play.google.com/store/apps/details?id=io.chativo.chat"
+  },
+  {
+    name: "ChativoV",
+    imageUrl: "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
+    alt: "chativo-v",
+    summary: "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
+    tech: [
+      "React Native",
+      "Javascript",
+      "Redux",
+      "Redux Saga",
+      "RealmJS"
+    ],
+    link: "https://play.google.com/store/apps/details?id=io.chativo.visitor"
+  },
 ];
 
 export {
