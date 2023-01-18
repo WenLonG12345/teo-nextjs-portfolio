@@ -21,14 +21,15 @@ import { companies, educations } from "../constant";
 import CompanyCard from "../components/CompanyCard";
 import Paragraph from "../components/Paragraph";
 import { UnderlinedText } from "../components/UnderlinedText";
+import { PageSlideFade, StaggerChildren } from "../utils/animations/page-transitions";
 
 function About() {
   const { colorMode } = useColorMode();
 
   return (
     <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
-      <SlideFade in offsetY={80}>
-        <Box>
+      <PageSlideFade>
+        <StaggerChildren>
           <Flex alignItems="center" my={10}>
             <Flex alignItems={"center"}>
               <Stack pr={3}>
@@ -83,8 +84,8 @@ function About() {
               </MotionBox>
             ))}
           </VStack>
-        </Box>
-      </SlideFade>
+        </StaggerChildren>
+      </PageSlideFade>
     </Container>
   );
 }

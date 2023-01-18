@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from 'next/app'
 import MainLayout from '../components/MainLayout';
 import { useState, useEffect } from 'react';
+import theme from '../layout/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -14,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (!domLoaded) return <></>;
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
