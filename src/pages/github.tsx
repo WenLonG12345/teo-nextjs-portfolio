@@ -16,7 +16,7 @@ const GithubPage: React.FC<IGithubPage> = ({ repos }) => {
       <Head>
         <title>Teo | Github</title>
         <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/profile_picture.jpg" />
       </Head>
 
       <main>

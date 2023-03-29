@@ -21,7 +21,7 @@ const ProjectsPage: React.FC<IProjectsPage> = ({ repos, articles }) => {
       <Head>
         <title>Projects</title>
         <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/profile_picture.jpg" />
       </Head>
 
       <main>
