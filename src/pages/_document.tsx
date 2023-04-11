@@ -6,7 +6,7 @@ const NextDocument = () => {
     <Html lang="en">
       <Head>
         {/* <!-- Favicon --> */}
-        <link rel="icon" href="/profile_picture.jpg" />
+        <link rel="icon" href="/profile_picture.png" />
 
         {/* <!-- Primary Meta Tags --> */}
         <meta name="title" content="Teo"></meta>
@@ -69,7 +69,7 @@ const NextDocument = () => {
         <meta name="twitter:description" content="Teo | Front End Engineer" />
         <meta
           name="twitter:image"
-          content="https://yourdomain.com/icons/android-chrome-192x192.png"
+          content="https://res.cloudinary.com/teo1996/image/upload/v1681184234/lkauudqm9kgkrkmt6mvv.png"
         />
         <meta name="twitter:creator" content="@Teo" />
         <meta property="og:type" content="website" />
@@ -79,7 +79,7 @@ const NextDocument = () => {
         <meta property="og:url" content="https://www.teowenlong.com/" />
         <meta
           property="og:image"
-          content="https://yourdomain.com/icons/apple-touch-icon.png"
+          content="https://res.cloudinary.com/teo1996/image/upload/v1681184234/lkauudqm9kgkrkmt6mvv.png"
         />
 
         {/* apple splash screen images  */}

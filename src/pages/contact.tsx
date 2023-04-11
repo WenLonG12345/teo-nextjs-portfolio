@@ -80,12 +80,6 @@ const Contact = () => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Teo | Contact</title>
-        <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/profile_picture.jpg" />
-      </Head>
-
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
           <SlideFade in offsetY={80}>
