@@ -60,7 +60,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
         </MotionFlex>
       </MotionFlex>
       <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6 }}>
-        Frontend Developer from Malaysia 🇲🇾
+        Front-End Engineer from Malaysia 🇲🇾
       </Paragraph>
       <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6 }}>
         Focused on{" "}

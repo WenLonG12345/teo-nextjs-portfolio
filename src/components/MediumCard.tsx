@@ -35,12 +35,11 @@ const MediumCard: React.FC<IMediumCard> = ({ article }) => {
         <LinkOverlay href={article.url} rel="noopener" isExternal>
           <Flex
             alignItems="center"
-            justifyContent="space-around"
             direction={{ base: "column", md: "row" }}
           >
-            <Image src={article.thumbnail} alt={article.title} width="200px" />
+            <Image src={article.thumbnail} alt={article.title} width="200px" maxW='200px' />
 
-            <Flex flexDirection="column" ml={[0, 5, 5]} mt={[5, 5, 0, 0]}>
+            <Flex flexDirection="column" ml={[0, 5, 10]} mt={[5, 5, 0, 0]}>
               <Heading
                 as="h2"
                 fontSize="md"

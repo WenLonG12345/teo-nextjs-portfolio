@@ -32,6 +32,7 @@ const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
         bg={useColorModeValue("white", "gray.800")}
         borderColor={useColorModeValue("gray.300", "gray.700")}
         _hover={{ borderColor: "blue.500" }}
+        minH="120px"
       >
         <VStack overflow="hidden" align="start" spacing={1}>
           <VStack spacing={1} align="start" w="100%">
@@ -55,6 +56,12 @@ const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
                 </HStack>
               </Tooltip>
               <HStack>
+                <Box _hover={{ color: "blue.500" }}>
+                  <Icon as={BiStar} boxSize="0.9em" mt={"1px"} />
+                  <Box as="span" ml="1" fontSize="sm">
+                    {gitRepo.stargazers_count}
+                  </Box>
+                </Box>
                 {gitRepo.forks_count && (
                   <Box _hover={{ color: "blue.500" }}>
                     <Icon as={BiGitRepoForked} boxSize="0.9em" mt={"1px"} />
@@ -63,12 +70,6 @@ const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
                     </Box>
                   </Box>
                 )}
-                <Box _hover={{ color: "blue.500" }}>
-                  <Icon as={BiStar} boxSize="0.9em" mt={"1px"} />
-                  <Box as="span" ml="1" fontSize="sm">
-                    {gitRepo.stargazers_count}
-                  </Box>
-                </Box>
               </HStack>
             </Flex>
             {gitRepo.language && (

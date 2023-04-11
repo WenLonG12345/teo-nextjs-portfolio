@@ -13,11 +13,6 @@ interface IArticlePage {
 const ArticlePage: React.FC<IArticlePage> = ({ articles }) => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Teo | Articles</title>
-        <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/profile_picture.jpg" />
-      </Head>
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
           <MediumSection articles={articles} />

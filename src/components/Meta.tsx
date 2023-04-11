@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import { capitalise } from "../utils/capitalise";
 
 type IMeta = {
-  title: string;
+  title?: string;
   description?: string;
   keywords?: string;
   image?: string;
@@ -16,6 +17,14 @@ const Meta: React.FC<IMeta> = ({
   image,
 }) => {
   const router = useRouter();
+
+  let pageTitle;
+  if (router.pathname === "/") {
+    pageTitle = "Teo | Front End Engineer";
+  } else {
+    const path = router.pathname.split("/").pop();
+    pageTitle = `Teo | ${capitalise(path)}`;
+  }
 
   return (
     <Head>
@@ -31,9 +40,7 @@ const Meta: React.FC<IMeta> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <title>
-        {title.includes("Teo") ? title : `Teo | ${title}`}
-      </title>
+      <title>{pageTitle}</title>
     </Head>
   );
 };

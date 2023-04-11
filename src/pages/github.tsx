@@ -11,14 +11,9 @@ interface IGithubPage {
 }
 
 const GithubPage: React.FC<IGithubPage> = ({ repos }) => {
+  console.log({repos})
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Teo | Github</title>
-        <meta name="description" content="Teo | Mobile Application Developer" />
-        <link rel="icon" href="/profile_picture.jpg" />
-      </Head>
-
       <main>
         <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
           <GithubSection repos={repos} />
