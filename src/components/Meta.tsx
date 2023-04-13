@@ -32,11 +32,11 @@ const Meta: React.FC<IMeta> = ({
       <meta charSet="utf-8" />
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={pageTitle} />
       <meta property="og:image" content={image} />
       <meta property="og:description" content={description} />
-      <meta property="og:site_name" content={title} />
-      <meta name="twitter:title" content={title} />
+      <meta property="og:site_name" content={pageTitle} />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
