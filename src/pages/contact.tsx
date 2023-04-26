@@ -19,11 +19,18 @@ import {
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
 import ErrorMessage from "../components/ErrorMessage";
-import { init } from "emailjs-com";
-import emailjs from "emailjs-com";
+import emailjs, { init } from "emailjs-com";
 
-const Contact = () => {
-  init("user_CraRkhplYuq6PLLiXeFjw");
+interface IContactPage {
+  emailjsServiceId: string;
+  emailjsUserId: string;
+}
+
+const ContactPage: React.FC<IContactPage> = ({
+  emailjsServiceId,
+  emailjsUserId,
+}) => {
+  init(emailjsUserId);
 
   const toast = useToast();
 
@@ -46,7 +53,7 @@ const Contact = () => {
     setIsLoading(true);
 
     emailjs
-      .send("service_a2q7dpb", "teo_email_template", {
+      .send(emailjsServiceId, "teo_email_template", {
         from_name: name,
         from_email: email,
         message: message,
@@ -162,4 +169,13 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      emailjsServiceId: process.env.EMAILJS_SERVICE_ID,
+      emailjsUserId: process.env.EMAILJS_USER_ID,
+    },
+  };
+}
