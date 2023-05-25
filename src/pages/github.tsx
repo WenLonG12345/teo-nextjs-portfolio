@@ -11,7 +11,6 @@ interface IGithubPage {
 }
 
 const GithubPage: React.FC<IGithubPage> = ({ repos }) => {
-  console.log({repos})
   return (
     <div className={styles.container}>
       <main>

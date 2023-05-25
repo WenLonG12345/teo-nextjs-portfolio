@@ -21,6 +21,7 @@ interface IGithubCard {
 }
 
 const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
+  console.log("github", gitRepo);
   return (
     <MotionBox whileHover={{ y: -5 }}>
       <LinkBox
@@ -39,9 +40,9 @@ const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
             <Flex
               justifyContent={"space-between"}
               width="100%"
-              onClick={(e) => window.open(gitRepo.url)}
+              onClick={(e) => window.open(gitRepo.clone_url)}
             >
-              <Tooltip hasArrow label={gitRepo.url} placement="top">
+              <Tooltip hasArrow label={gitRepo.clone_url} placement="top">
                 <HStack cursor={"pointer"}>
                   <Icon as={FiGithub} boxSize="0.9em" mt={"1px"} />
                   <Text
