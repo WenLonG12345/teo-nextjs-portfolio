@@ -27,9 +27,9 @@ const menuLinks = [
   { name: "About Me", route: "/about" },
   // { name: "Experience", route: "/experience" },
   // { name: "Projects", route: "/projects" },
-  { name: "Github", route: "/github" },
-  { name: "Articles", route: "/article" },
-  { name: "Contact", route: "/contact" },
+  { name: "Github", route: "/repos" },
+  { name: "Articles", route: "/articles" },
+  // { name: "Contact", route: "/contact" },
 ];
 
 const siteConfig = {
@@ -39,33 +39,28 @@ const siteConfig = {
     accounts: [
       {
         url: "https://github.com/WenLonG12345",
-        icon: <FaGithub />,
+        icon: <FaGithub color="#1b202b" size={20} />,
         name: "Github",
-        type: "gray",
       },
       {
         url: "https://www.linkedin.com/in/teo-wen-long-19960316/",
-        icon: <FaLinkedin />,
+        icon: <FaLinkedin color="#3b8bc4" size={20} />,
         name: "Linkedin",
-        type: "linkedin",
       },
       {
         url: "https://stackoverflow.com/users/12261890/teo",
-        icon: <FaStackOverflow />,
+        icon: <FaStackOverflow color="#b45c30" size={20} />,
         name: "StackOverflow",
-        type: "orange",
       },
       {
         url: "https://skynight1996.medium.com/",
-        icon: <FaMedium />,
+        icon: <FaMedium color="#1b202b" size={20} />,
         name: "Medium",
-        type: "gray",
       },
       {
         url: "mailto:teowenlong0316@gmail.com",
-        icon: <SiGmail />,
+        icon: <SiGmail color="#b63d37" size={20} />,
         name: "Gmail",
-        type: "red",
       },
     ],
   },
@@ -227,62 +222,42 @@ const sideProjects = [
     summary:
       "NFC business card builder linked with unique NFT. Build business profile embed with NFC that allows others to scan and connect.",
     link: "https://nextjs-3commasclub-frontend.vercel.app/",
-    tech: [
-      'NextJS',
-      "ChakraUI",
-      "Ant Design",
-      "Ant Design Pro"
-    ]
+    tech: ["NextJS", "ChakraUI", "Ant Design", "Ant Design Pro"],
   },
   {
     name: "KlusterX Player Portal",
     imageUrl: "/klusterx_player.png",
     alt: "klusterx",
-    summary: "Online Casino Player Portal, built with NextJS, TailwindCSS and MantineUI",
-    tech: [
-      'NextJS',
-      "TailwindCSS",
-      "MantineUI",
-      "Zustand"
-    ]
+    summary:
+      "Online Casino Player Portal, built with NextJS, TailwindCSS and MantineUI",
+    tech: ["NextJS", "TailwindCSS", "MantineUI", "Zustand"],
   },
   {
     name: "KlusterX Tenant Portal",
     imageUrl: "/klusterx_tenant.png",
     alt: "klusterx",
     summary: "Online Casino Tenant Portal, built with Ant Design Pro",
-    tech: [
-      "UmiJS",
-      "Ant Design",
-      "Ant Design Pro"
-    ]
+    tech: ["UmiJS", "Ant Design", "Ant Design Pro"],
   },
   {
     name: "Chativo",
-    imageUrl: "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
+    imageUrl:
+      "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
     alt: "chativo",
-    summary: "Enterprise ready live-chat base customer support & engagement software",
-    tech: [
-      "Android",
-      "Kotlin",
-      "Android Jetpack",
-      "Coroutine Flow",
-    ],
-    link: "https://play.google.com/store/apps/details?id=io.chativo.chat"
+    summary:
+      "Enterprise ready live-chat base customer support & engagement software",
+    tech: ["Android", "Kotlin", "Android Jetpack", "Coroutine Flow"],
+    link: "https://play.google.com/store/apps/details?id=io.chativo.chat",
   },
   {
     name: "ChativoV",
-    imageUrl: "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
+    imageUrl:
+      "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
     alt: "chativo-v",
-    summary: "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
-    tech: [
-      "React Native",
-      "Javascript",
-      "Redux",
-      "Redux Saga",
-      "RealmJS"
-    ],
-    link: "https://play.google.com/store/apps/details?id=io.chativo.visitor"
+    summary:
+      "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
+    tech: ["React Native", "Javascript", "Redux", "Redux Saga", "RealmJS"],
+    link: "https://play.google.com/store/apps/details?id=io.chativo.visitor",
   },
 ];
 
