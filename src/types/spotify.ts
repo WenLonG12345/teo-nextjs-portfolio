@@ -1,8 +1,10 @@
-export type SpotifySong = {
-  album: string;
-  albumImageUrl: string;
-  artist: string;
-  isPlaying: boolean;
-  songUrl: string;
-  title: string;
-}
+export type ISpotifySong =
+  | {
+      album?: string;
+      albumImageUrl?: string;
+      artist?: string;
+      isPlaying: true;
+      songUrl?: string;
+      title?: string;
+    }
+  | { isPlaying: false };

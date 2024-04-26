@@ -13,10 +13,10 @@ import {
 import { MotionBox } from "../../utils/motion";
 import Paragraph from "../Paragraph";
 import { SiSpotify } from "react-icons/si";
-import { SpotifySong } from "../../types/spotify";
+import { ISpotifySong } from "../../types/spotify";
 
 interface ISpotifySection {
-  song: SpotifySong;
+  song: ISpotifySong;
 }
 
 const SpotifySection: React.FC<ISpotifySection> = ({ song }) => {
