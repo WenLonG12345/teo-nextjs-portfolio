@@ -4,6 +4,7 @@ import { Heading, SlideFade, Box, SimpleGrid, Text } from "@chakra-ui/react";
 import GithubCard from "../GithubCard";
 import Paragraph from "../Paragraph";
 import { GitRepo } from "../../types/gitRepo";
+import { PageSlideFade } from "../../utils/animations/page-transitions";
 
 interface IGithubSection {
   repos: GitRepo[];
@@ -11,9 +12,9 @@ interface IGithubSection {
 
 const GithubSection: React.FC<IGithubSection> = ({ repos }) => {
   if (!repos) return <></>;
-  console.log({ repos });
+
   return (
-    <SlideFade in offsetY={80} delay={0.2}>
+    <PageSlideFade>
       <Heading
         as="h1"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
@@ -34,7 +35,7 @@ const GithubSection: React.FC<IGithubSection> = ({ repos }) => {
           ))}
         </SimpleGrid>
       </Box>
-    </SlideFade>
+    </PageSlideFade>
   );
 };
 

@@ -4,7 +4,7 @@ import axios from "axios";
 const getGithubRepos = async (username: string) => {
   try {
     const res = await axios.get(
-      `https://api.github.com/users/${username}/repos`
+      `https://api.github.com/users/${username}/repos?per_page=100`
     );
 
     let repos = res.data;

@@ -7,5 +7,4 @@ export type Social = {
 export type TechStack = {
   name: string;
   icon: any;
-  url: string;
 }

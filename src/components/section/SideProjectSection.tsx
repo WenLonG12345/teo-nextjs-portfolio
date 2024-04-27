@@ -33,10 +33,10 @@ export const SideProjectSection: React.FC<ILiveProjectSection> = ({
         List of projects that I have made in the past.
       </Text>
 
-      <SimpleGrid columns={[1, 1, 2, 2]} mt={5}>
-        {sideProjects.map((project) => {
-          return <SideProjectCard key={project.name} project={project} />;
-        })}
+      <SimpleGrid columns={[1, 1, 2, 2]} mt={5} alignItems={"stretch"}>
+        {sideProjects.map((project) => (
+          <SideProjectCard key={project.name} project={project} />
+        ))}
       </SimpleGrid>
     </SlideFade>
   );

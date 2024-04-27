@@ -29,7 +29,9 @@ const getMediumArticles = async (username: string) => {
       ({ title, thumbnail, guid, pubDate, description, categories }) => {
         return {
           title: title,
-          thumbnail: thumbnail,
+          thumbnail: description
+            ?.toString()
+            .match(/<img[^>]+src="([^">]+)"/)![1],
           url: guid,
           date: moment(pubDate).format("YYYY - MMM DD"),
           description: shortenDescription(description),

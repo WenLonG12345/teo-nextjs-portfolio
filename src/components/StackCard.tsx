@@ -20,8 +20,7 @@ interface IStackCard {
 const StackCard: React.FC<IStackCard> = ({ stack }) => {
   return (
     <MotionBox whileHover={{ y: -5 }}>
-      <LinkBox
-        as="article"
+      <Box
         w="100%"
         p={4}
         borderColor={useColorModeValue("gray.300", "gray.700")}
@@ -43,15 +42,13 @@ const StackCard: React.FC<IStackCard> = ({ stack }) => {
             _groupHover={{ color: "blue.500" }}
             icon={stack?.icon}
           />
-          <LinkOverlay href={stack?.url} rel="noopener" isExternal>
-            <Flex>
-              <Text size="sm" _hover={{ color: "blue.500" }}>
-                {stack?.name}
-              </Text>
-            </Flex>
-          </LinkOverlay>
+          <Flex>
+            <Text size="sm" _hover={{ color: "blue.500" }}>
+              {stack?.name}
+            </Text>
+          </Flex>
         </Flex>
-      </LinkBox>
+      </Box>
     </MotionBox>
   );
 };

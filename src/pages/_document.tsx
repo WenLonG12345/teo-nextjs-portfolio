@@ -11,7 +11,10 @@ const NextDocument = () => {
         {/* <!-- Primary Meta Tags --> */}
         <meta name="title" content="Teo"></meta>
         <meta name="description" content="Teo | Front End Engineer"></meta>
-        <meta name="keywords" content="React, Android, Javascript, Kotlin, Java, SCSS, Redux"></meta>
+        <meta
+          name="keywords"
+          content="React, Android, Javascript, Kotlin, Java, SCSS, Redux"
+        ></meta>
 
         {/* PWA */}
         <meta name="application-name" content="Teo" />
@@ -81,6 +84,8 @@ const NextDocument = () => {
           property="og:image"
           content="https://res.cloudinary.com/teo1996/image/upload/v1681184234/lkauudqm9kgkrkmt6mvv.png"
         />
+
+        <link rel="manifest" href="/manifest.json" />
 
         {/* apple splash screen images  */}
         {/* <link

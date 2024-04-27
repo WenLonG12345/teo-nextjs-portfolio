@@ -19,9 +19,12 @@ import {
   FaMedium,
   FaGithub,
   FaSass,
+  FaAws,
 } from "react-icons/fa";
+import { SiReactquery } from "react-icons/si";
 import { CgAlbum } from "react-icons/cg";
 import { TbBrandNextjs } from "react-icons/tb";
+import Image from "next/image";
 
 const menuLinks = [
   { name: "About Me", route: "/about" },
@@ -29,7 +32,7 @@ const menuLinks = [
   // { name: "Projects", route: "/projects" },
   { name: "Github", route: "/github" },
   { name: "Articles", route: "/article" },
-  { name: "Contact", route: "/contact" },
+  // { name: "Contact", route: "/contact" },
 ];
 
 const siteConfig = {
@@ -80,84 +83,73 @@ const resume = {
 const mobileTechStacks = [
   {
     name: "Android",
-    icon: <FaAndroid fontSize="20px" />,
-    url: "https://www.android.com/",
+    icon: <FaAndroid size={20} />,
   },
   {
     name: "React Native",
-    icon: <FaReact fontSize="20px" />,
-    url: "https://reactnative.dev/",
+    icon: <FaReact size={20} />,
   },
   {
     name: "Kotlin",
-    icon: <SiKotlin fontSize="20px" />,
-    url: "https://kotlinlang.org/",
+    icon: <SiKotlin size={20} />,
   },
   {
     name: "Java",
-    icon: <FaJava fontSize="20px" />,
-    url: "https://www.java.com/en/",
+    icon: <FaJava size={20} />,
   },
 ];
 
 const webTechStacks = [
   {
     name: "React",
-    icon: <FaReact fontSize="20px" />,
-    url: "https://reactnative.dev/",
+    icon: <FaReact size={20} />,
   },
   {
     name: "NextJS",
-    icon: <TbBrandNextjs fontSize="20px" />,
-    url: "https://nextjs.org/",
+    icon: <TbBrandNextjs size={20} />,
   },
   {
     name: "Typescript",
-    icon: <SiTypescript fontSize="20px" />,
-    url: "https://www.typescriptlang.org/",
+    icon: <SiTypescript size={20} />,
   },
   {
     name: "Javascript",
-    icon: <FaJs fontSize="20px" />,
-    url: "https://www.javascript.com/",
+    icon: <FaJs size={20} />,
   },
   {
-    name: "Redux & Redux Saga",
-    icon: <SiRedux fontSize="20px" />,
-    url: "https://redux.js.org/",
+    name: "React Query",
+    icon: <SiReactquery size={20} />,
+  },
+  {
+    name: "Redux Saga",
+    icon: <SiRedux size={20} />,
   },
   {
     name: "TailwindCSS",
-    icon: <SiTailwindcss fontSize="20px" />,
-    url: "https://tailwindcss.com/",
-  },
-  {
-    name: "Ant Design",
-    icon: <SiAntdesign fontSize="20px" />,
-    url: "https://ant.design/",
+    icon: <SiTailwindcss size={20} />,
   },
   {
     name: "SASS",
-    icon: <FaSass fontSize="20px" />,
-    url: "https://sass-lang.com/",
+    icon: <FaSass size={20} />,
   },
 ];
 
 const otherTechStacks = [
   {
     name: "CI/CD - Fastlane",
-    icon: <SiFastlane fontSize="20px" />,
-    url: "https://fastlane.tools/",
+    icon: <SiFastlane size={20} />,
   },
   {
     name: "Firebase",
-    icon: <SiFirebase fontSize="20px" />,
-    url: "https://firebase.google.com/",
+    icon: <SiFirebase size={20} />,
   },
   {
     name: "Github & GitLab",
-    icon: <FaGitAlt fontSize="20px" />,
-    url: "https://www.gitlab.com/",
+    icon: <FaGitAlt size={20} />,
+  },
+  {
+    name: "AWS Service",
+    icon: <FaAws size={20} />,
   },
 ];
 
@@ -221,68 +213,84 @@ const educations = [
 
 const sideProjects = [
   {
+    name: "Astro News Portals",
+    imageUrl: "/astro_vortals.png",
+    alt: "AstroVortals",
+    summary:
+      "Discover Malaysia's premier news portals, offering comprehensive coverage of diverse topics and boasting over 2 million monthly active users (MAU)",
+    link: "https://www.astroawani.com/",
+    tech: ["React", "ReactQuery", "SCSS", "AWS", "Redux", "Typescript"],
+  },
+  {
+    name: "Ecosystem Design System",
+    imageUrl: "/eco-design-system.png",
+    alt: "eco-design-system",
+    summary:
+      "Design System built with StorybookJS based on design token and publish as open-source in NPM",
+    link: "https://devdesignsystem.eco.astro.com.my/",
+    tech: ["React", "StorybookJS", "SCSS", "Emotion", "Typescript"],
+  },
+  {
+    name: "Digital Fortress Assistant Portal",
+    imageUrl: "/dfap.png",
+    alt: "dfap",
+    summary:
+      "CMS Assistant Portal for building website with components and make configuration easier",
+    link: "https://de-digital-fortress-assistant-stg.eco.astro.com.my/",
+    tech: ["React", "ReactQuery", "TailwindCSS", "MantineUI", "Typescript"],
+  },
+  {
+    name: "Ideasss",
+    imageUrl: "/ideasss.png",
+    alt: "ideasss",
+    summary:
+      "NFT Platform for Creativity and Ideas,  First marketplace to connect demanders and designers through transparent competition",
+    link: "https://ideasss.com/",
+    tech: ["React", "ReactQuery", "TailwindCSS", "Typescript", "Zustand"],
+  },
+  {
     name: "3CommasClub NFT",
     imageUrl: "/3commas.png",
     alt: "3commasclub",
     summary:
       "NFC business card builder linked with unique NFT. Build business profile embed with NFC that allows others to scan and connect.",
     link: "https://nextjs-3commasclub-frontend.vercel.app/",
-    tech: [
-      'NextJS',
-      "ChakraUI",
-      "Ant Design",
-      "Ant Design Pro"
-    ]
+    tech: ["NextJS", "ChakraUI", "Ant Design", "Ant Design Pro"],
   },
   {
     name: "KlusterX Player Portal",
     imageUrl: "/klusterx_player.png",
     alt: "klusterx",
-    summary: "Online Casino Player Portal, built with NextJS, TailwindCSS and MantineUI",
-    tech: [
-      'NextJS',
-      "TailwindCSS",
-      "MantineUI",
-      "Zustand"
-    ]
+    summary:
+      "Online Gaming Player Portal, built with NextJS, TailwindCSS and MantineUI",
+    tech: ["NextJS", "TailwindCSS", "MantineUI", "Zustand"],
   },
   {
     name: "KlusterX Tenant Portal",
     imageUrl: "/klusterx_tenant.png",
     alt: "klusterx",
-    summary: "Online Casino Tenant Portal, built with Ant Design Pro",
-    tech: [
-      "UmiJS",
-      "Ant Design",
-      "Ant Design Pro"
-    ]
+    summary: "Online Gaming Tenant Portal, built with Ant Design Pro",
+    tech: ["UmiJS", "Ant Design", "Ant Design Pro"],
   },
   {
     name: "Chativo",
-    imageUrl: "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
+    imageUrl:
+      "https://play-lh.googleusercontent.com/tgLiP-ZL-sBuZt2RzDU1tN88Cp7NPbdjF7c0311_dui86f1HrAQM0j4gXaRE0pb5zW0=s360-rw",
     alt: "chativo",
-    summary: "Enterprise ready live-chat base customer support & engagement software",
-    tech: [
-      "Android",
-      "Kotlin",
-      "Android Jetpack",
-      "Coroutine Flow",
-    ],
-    link: "https://play.google.com/store/apps/details?id=io.chativo.chat"
+    summary:
+      "Enterprise ready live-chat base customer support & engagement software",
+    tech: ["Android", "Kotlin", "Android Jetpack", "Coroutine Flow"],
+    link: "https://play.google.com/store/apps/details?id=io.chativo.chat",
   },
   {
     name: "ChativoV",
-    imageUrl: "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
+    imageUrl:
+      "https://play-lh.googleusercontent.com/5U5s7sSIuzP6CygPkU2ZYxyOXT-MKv7oiyweGKHgkEgVameOcYt44rnXqCTWZJNZgVqn=s360-rw",
     alt: "chativo-v",
-    summary: "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
-    tech: [
-      "React Native",
-      "Javascript",
-      "Redux",
-      "Redux Saga",
-      "RealmJS"
-    ],
-    link: "https://play.google.com/store/apps/details?id=io.chativo.visitor"
+    summary:
+      "Live-chat specifically designed for visitors to communicate with real-time agent instantly",
+    tech: ["React Native", "Javascript", "Redux", "Redux Saga", "RealmJS"],
+    link: "https://play.google.com/store/apps/details?id=io.chativo.visitor",
   },
 ];
 

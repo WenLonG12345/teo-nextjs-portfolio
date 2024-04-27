@@ -10,6 +10,8 @@ import {
   useColorModeValue,
   LinkBox,
   LinkOverlay,
+  VStack,
+  HStack,
 } from "@chakra-ui/react";
 import { Company } from "../types/company";
 
@@ -31,7 +33,7 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
       position="relative"
     >
       <LinkOverlay href={company.url} rel="noopener" isExternal>
-        <Flex justifyContent="space-between">
+        <Flex justifyContent="space-between" direction={['column', 'column', 'row']} gap={3}>
           <Flex>
             <Image
               rounded="full"
@@ -56,7 +58,7 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
               >
                 {company.role}
               </Heading>
-              <Stack
+              <VStack
                 spacing={1}
                 mt={3}
                 alignItems="center"
@@ -68,19 +70,20 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                     {skill}
                   </Tag>
                 ))}
-              </Stack>
+              </VStack>
             </Stack>
           </Flex>
-          <Stack display={["none", "none", "flex", "flex"]}>
+          <Stack>
             <Text fontSize={14} color={`mode.${colorMode}.career.subtext`}>
               {company.period}
             </Text>
           </Stack>
         </Flex>
-        <Stack
+        <HStack
           spacing={1}
           mt={3}
           alignItems="center"
+          
           display={["flex", "flex", "none", "none"]}
         >
           {company.skills.map((skill) => (
@@ -88,7 +91,7 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
               {skill}
             </Tag>
           ))}
-        </Stack>
+        </HStack>
       </LinkOverlay>
     </LinkBox>
   );

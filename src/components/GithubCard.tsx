@@ -21,7 +21,6 @@ interface IGithubCard {
 }
 
 const GithubCard: React.FC<IGithubCard> = ({ gitRepo }) => {
-  console.log("github", gitRepo);
   return (
     <MotionBox whileHover={{ y: -5 }}>
       <LinkBox

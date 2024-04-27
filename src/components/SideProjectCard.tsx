@@ -8,6 +8,8 @@ import {
   useColorModeValue,
   Tag,
   LinkBox,
+  VStack,
+  HStack,
 } from "@chakra-ui/react";
 import { MotionBox } from "../utils/motion";
 import { Project } from "../types/project";
@@ -40,6 +42,7 @@ export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => (
             maxH={"210px"}
             h={"210px"}
             w="full"
+            alt={project.name}
           />
         </Box>
         <Stack mb={3}>
@@ -49,17 +52,20 @@ export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => (
             textTransform={"uppercase"}
             fontWeight={800}
             fontSize={"lg"}
-            letterSpacing={1.1}
           >
             {project?.name}
           </Text>
-          <Text color={"gray.500"}>{project?.summary}</Text>
+          <Text color={"gray.500"} h={"80px"}>
+            {project?.summary}
+          </Text>
         </Stack>
-        {project.tech.map((tech) => (
-          <Tag size="sm" padding="0 5px" key={tech} mx={1}>
-            {tech}
-          </Tag>
-        ))}
+        <HStack>
+          {project.tech.map((tech) => (
+            <Tag size="sm" key={tech}>
+              {tech}
+            </Tag>
+          ))}
+        </HStack>
       </LinkBox>
     </Center>
   </MotionBox>

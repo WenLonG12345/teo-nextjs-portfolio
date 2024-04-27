@@ -3,6 +3,7 @@ import { Heading, SlideFade, Box, Text } from "@chakra-ui/react";
 import MediumCard from "../MediumCard";
 import Paragraph from "../Paragraph";
 import { Article } from "../../types/article";
+import { PageSlideFade } from "../../utils/animations/page-transitions";
 
 interface IMediumSection {
   articles: Article[];
@@ -10,7 +11,7 @@ interface IMediumSection {
 
 const MediumSection: React.FC<IMediumSection> = ({ articles }) => {
   return (
-    <SlideFade in offsetY={80} delay={0.2}>
+    <PageSlideFade>
       <Heading
         as="h1"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
@@ -30,7 +31,7 @@ const MediumSection: React.FC<IMediumSection> = ({ articles }) => {
           <MediumCard article={article} key={article.title} />
         ))}
       </Box>
-    </SlideFade>
+    </PageSlideFade>
   );
 };
 
