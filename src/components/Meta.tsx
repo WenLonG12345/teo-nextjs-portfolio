@@ -26,6 +26,8 @@ const Meta: React.FC<IMeta> = ({
     pageTitle = `Teo | ${capitalise(path)}`;
   }
 
+  console.log(window.location)
+
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +41,7 @@ const Meta: React.FC<IMeta> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <link rel="canonical" href={router.pathname} />
+      <link rel="canonical" href={window.location.href} />
       <title>{pageTitle}</title>
     </Head>
   );
