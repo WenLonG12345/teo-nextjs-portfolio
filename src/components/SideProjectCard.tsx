@@ -10,6 +10,7 @@ import {
   LinkBox,
   VStack,
   HStack,
+  Flex,
 } from "@chakra-ui/react";
 import { MotionBox } from "../utils/motion";
 import { Project } from "../types/project";
@@ -20,15 +21,14 @@ interface ISideProjectCard {
 
 export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => (
   <MotionBox whileHover={{ y: -5 }}>
-    <Center py={6}>
+    <Center>
       <LinkBox
         w={"full"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         rounded={"md"}
-        px={6}
+        px={5}
         py={3}
-        mx={5}
         overflow={"hidden"}
         _hover={{ cursor: "pointer" }}
         onClick={() => {
@@ -55,17 +55,17 @@ export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => (
           >
             {project?.name}
           </Text>
-          <Text color={"gray.500"} h={"80px"}>
+          <Text color={"gray.500"} minH={"80px"}>
             {project?.summary}
           </Text>
         </Stack>
-        <HStack>
+        <Flex gap={2} wrap={'wrap'}>
           {project.tech.map((tech) => (
             <Tag size="sm" key={tech}>
               {tech}
             </Tag>
           ))}
-        </HStack>
+        </Flex>
       </LinkBox>
     </Center>
   </MotionBox>

@@ -53,7 +53,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ song }) => {
         <MotionFlex alignItems={"flex-end"} whileHover={{ scale: 1.2 }}>
           <Avatar
             name="Teo Wen Long"
-            src="/profile_picture.png"
+            src="/images/profile_picture.png"
             mb={5}
             size="lg"
           />

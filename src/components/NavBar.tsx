@@ -1,13 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import {
-  Text,
-  Container,
   Flex,
   IconButton,
   HStack,
   Box,
-  Button,
   Stack,
   Link as CharkaLink,
   useColorModeValue,
@@ -16,10 +13,10 @@ import {
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { useDisclosure } from "@chakra-ui/hooks";
-import { useColorMode } from "@chakra-ui/color-mode";
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { menuLinks } from "../constant";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import Link from "next/link";
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -51,7 +48,7 @@ const NavBar = () => {
                 : useColorModeValue("black", "white")
             }
             onClick={isOpen ? onClose : onOpen}
-            fontWeight='medium'
+            fontWeight="medium"
           >
             {link.name}
           </CharkaLink>
@@ -61,54 +58,59 @@ const NavBar = () => {
   );
 
   return (
-    <>
-      <Box bg={useColorModeValue("white", "gray.700")} px={4} boxShadow={"lg"}>
-        <Flex
-          h={16}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          w={["95%", "95%", "95%"]}
-          maxW={"container.lg"}
-          mx="auto"
-        >
-          <IconButton
-            size={"md"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={["inherit", "inherit", "none"]}
-            onClick={isOpen ? onClose : onOpen}
+    <Box
+      bg={useColorModeValue("white", "gray.700")}
+      px={4}
+      boxShadow={"lg"}
+      pos={"sticky"}
+      top={0}
+      zIndex={99}
+    >
+      <Flex
+        h={16}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        w={["95%", "95%", "95%"]}
+        maxW={"container.lg"}
+        mx="auto"
+      >
+        <IconButton
+          size={"md"}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label={"Open Menu"}
+          display={["inherit", "inherit", "none"]}
+          onClick={isOpen ? onClose : onOpen}
+        />
+        <HStack spacing={8} alignItems={"center"}>
+          <Avatar
+            as={Link}
+            size="sm"
+            href="/"
+            src="/images/profile_picture.png"
+            _hover={{ borderColor: "blue.500" }}
           />
-          <HStack spacing={8} alignItems={"center"}>
-            <Avatar
-              as={CharkaLink}
-              size="sm"
-              href="/"
-              src="/profile_picture.png"
-              _hover={{ borderColor: "blue.500" }}
-            />
-            <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
-              {navItem}
-            </HStack>
+          <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
+            {navItem}
           </HStack>
-          <Flex alignItems={"center"}>
-            <ColorModeSwitcher justifySelf="flex-end" />
-          </Flex>
+        </HStack>
+        <Flex alignItems={"center"}>
+          <ColorModeSwitcher justifySelf="flex-end" />
         </Flex>
+      </Flex>
 
-        {isOpen && (
-          <Box
-            pb={4}
-            w={["100%", "100%", "80%"]}
-            maxW={"container.lg"}
-            display={["inherit", "inherit", "none"]}
-          >
-            <Stack as={"nav"} spacing={4}>
-              {navItem}
-            </Stack>
-          </Box>
-        )}
-      </Box>
-    </>
+      {isOpen && (
+        <Box
+          pb={4}
+          w={["100%", "100%", "80%"]}
+          maxW={"container.lg"}
+          display={["inherit", "inherit", "none"]}
+        >
+          <Stack as={"nav"} spacing={4}>
+            {navItem}
+          </Stack>
+        </Box>
+      )}
+    </Box>
   );
 };
 

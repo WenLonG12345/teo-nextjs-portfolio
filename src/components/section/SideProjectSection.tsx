@@ -5,18 +5,16 @@ import {
   Text,
   useColorModeValue,
   SimpleGrid,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
 } from "@chakra-ui/react";
-import { sideProjects } from "../../constant";
+import { projects } from "../../constant";
 import { SideProjectCard } from "../SideProjectCard";
-import { Project } from "../../types/project";
 
-interface ILiveProjectSection {
-  project?: Project;
-}
-
-export const SideProjectSection: React.FC<ILiveProjectSection> = ({
-  project,
-}) => {
+export const SideProjectSection = () => {
   return (
     <SlideFade in offsetY={80}>
       <Heading
@@ -30,14 +28,30 @@ export const SideProjectSection: React.FC<ILiveProjectSection> = ({
         textColor={useColorModeValue("gray.600", "gray.400")}
         fontSize={"lg"}
       >
-        List of projects that I have made in the past.
+        List of projects that I involved or have made in the past.
       </Text>
 
-      <SimpleGrid columns={[1, 1, 2, 2]} mt={5} alignItems={"stretch"}>
-        {sideProjects.map((project) => (
-          <SideProjectCard key={project.name} project={project} />
-        ))}
-      </SimpleGrid>
+      <Tabs variant="solid-rounded" mt={5}>
+        <TabList>
+          {Object.keys(projects).map((k) => (
+            <Tab key={k} mx={2}>
+              {k}
+            </Tab>
+          ))}
+        </TabList>
+
+        <TabPanels mt={5}>
+          {Object.entries(projects).map(([k, v]) => (
+            <TabPanel p={0} key={k}>
+              <SimpleGrid columns={[1, 1, 2, 2]} gap={5}>
+                {v.map((project) => (
+                  <SideProjectCard key={project.name} project={project} />
+                ))}
+              </SimpleGrid>
+            </TabPanel>
+          ))}
+        </TabPanels>
+      </Tabs>
     </SlideFade>
   );
 };

@@ -1,6 +1,5 @@
-import React from "react";
 import axios from "axios";
-import moment from "moment";
+import dayjs from 'dayjs';
 import { ArticleRes } from "../types/article";
 
 const shortenDescription = (description: string) => {
@@ -33,7 +32,7 @@ const getMediumArticles = async (username: string) => {
             ?.toString()
             .match(/<img[^>]+src="([^">]+)"/)![1],
           url: guid,
-          date: moment(pubDate).format("YYYY - MMM DD"),
+          date: dayjs(pubDate).format("YYYY - MMM DD"),
           description: shortenDescription(description),
           categories: categories,
         };

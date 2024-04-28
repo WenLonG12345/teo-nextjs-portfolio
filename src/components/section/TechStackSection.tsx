@@ -12,11 +12,7 @@ import {
   TabPanel,
 } from "@chakra-ui/react";
 import StackCard from "../StackCard";
-import {
-  mobileTechStacks,
-  otherTechStacks,
-  webTechStacks,
-} from "../../constant";
+import { techStacks } from "../../constant";
 
 const TechStackSection = () => {
   return (
@@ -37,57 +33,31 @@ const TechStackSection = () => {
       </Text>
       <Tabs variant="solid-rounded" mt={5}>
         <TabList>
-          <Tab mx={2}>Web</Tab>
-          <Tab mx={2}>Mobile</Tab>
-          <Tab mx={2}>Others</Tab>
+          {Object.keys(techStacks).map((k) => (
+            <Tab mx={2} key={k}>
+              {k}
+            </Tab>
+          ))}
         </TabList>
 
         <TabPanels>
-          <TabPanel>
-            <Grid
-              templateColumns={[
-                "1fr",
-                "repeat(2,1fr)",
-                "repeat(3, 1fr)",
-                "repeat(4, 1fr)",
-              ]}
-              gap={[2, 5, 5, 5]}
-            >
-              {webTechStacks.map((stack) => (
-                <StackCard stack={stack} key={stack?.name} />
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel>
-            <Grid
-              templateColumns={[
-                "1fr",
-                "repeat(2,1fr)",
-                "repeat(3, 1fr)",
-                "repeat(4, 1fr)",
-              ]}
-              gap={[2, 5, 5, 5]}
-            >
-              {mobileTechStacks.map((stack) => (
-                <StackCard stack={stack} key={stack?.name} />
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel>
-            <Grid
-              templateColumns={[
-                "1fr",
-                "repeat(2,1fr)",
-                "repeat(3, 1fr)",
-                "repeat(4, 1fr)",
-              ]}
-              gap={[2, 5, 5, 5]}
-            >
-              {otherTechStacks.map((stack) => (
-                <StackCard stack={stack} key={stack?.name} />
-              ))}
-            </Grid>
-          </TabPanel>
+          {Object.entries(techStacks).map(([key, v]) => (
+            <TabPanel key={key}>
+              <Grid
+                templateColumns={[
+                  "1fr",
+                  "repeat(2,1fr)",
+                  "repeat(3, 1fr)",
+                  "repeat(4, 1fr)",
+                ]}
+                gap={[2, 5, 5, 5]}
+              >
+                {v.map((stack) => (
+                  <StackCard stack={stack} key={stack?.name} />
+                ))}
+              </Grid>
+            </TabPanel>
+          ))}
         </TabPanels>
       </Tabs>
     </SlideFade>

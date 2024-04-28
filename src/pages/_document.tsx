@@ -6,7 +6,7 @@ const NextDocument = () => {
     <Html lang="en">
       <Head>
         {/* <!-- Favicon --> */}
-        <link rel="icon" href="/profile_picture.png" />
+        <link rel="icon" href="/images/profile_picture.png" />
 
         {/* <!-- Primary Meta Tags --> */}
         <meta name="title" content="Teo"></meta>
