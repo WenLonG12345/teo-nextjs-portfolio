@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import Header from "./Header";
 import Footer from "./Footer";
 
 interface IMainLayout {
@@ -9,7 +9,7 @@ interface IMainLayout {
 const MainLayout: React.FC<IMainLayout> = ({ children }) => {
   return (
     <>
-      <NavBar />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

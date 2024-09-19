@@ -23,6 +23,8 @@ import {
 import { CgAlbum } from "react-icons/cg";
 import { TbBrandNextjs } from "react-icons/tb";
 
+const dateOfStartWorking = '2020-08-01';
+
 const menuLinks = [
   { name: "About Me", route: "/about" },
   // { name: "Experience", route: "/experience" },
@@ -271,4 +273,5 @@ export {
   companies,
   educations,
   sideProjects,
+  dateOfStartWorking,
 };

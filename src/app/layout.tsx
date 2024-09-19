@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Josefin_Sans } from "next/font/google";
-import NavBar from "@/components/NavBar";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-
-import "@mantine/core/styles.css";
-import "./globals.css";
+import { Outfit } from "next/font/google";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "next-themes";
 
-const josefinSans = Josefin_Sans({ subsets: ["latin"] });
+import "./styles/app.css";
+import clsx from "clsx";
+
+const outfit = Outfit({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Teo | Front End Engineer",
@@ -21,16 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <ColorSchemeScript />
-      </head>
-      <body className={josefinSans.className}>
-        <MantineProvider>
-          <NavBar />
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={clsx(
+          outfit.className,
+          "dark:bg-[#1b202b] dark:text-[#A0AEC0]"
+        )}
+      >
+        <ThemeProvider defaultTheme="dark" attribute="class">
+          <Header />
           <div className="min-h-[calc(100svh-100px)]">{children}</div>
           <Footer />
-        </MantineProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

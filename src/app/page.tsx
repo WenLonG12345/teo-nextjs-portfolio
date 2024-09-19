@@ -1,6 +1,6 @@
-import NavBar from "@/components/NavBar";
+
+import ProfileSection from "@/components/new/home/ProfileSection";
 import { ISpotifySong } from "@/types/spotify";
-import Image from "next/image";
 
 async function getSpotifyData(): Promise<ISpotifySong> {
   const res = await fetch("http://localhost:3000/api/spotify");
@@ -15,11 +15,9 @@ async function getSpotifyData(): Promise<ISpotifySong> {
 async function Home() {
   const spotifyData = await getSpotifyData();
 
-  console.log("@test", spotifyData);
-  
   return (
-    <main>
-      <div>This is HOME</div>
+    <main className="container mx-auto">
+      <ProfileSection song={spotifyData} />
     </main>
   );
 }
