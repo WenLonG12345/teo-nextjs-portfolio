@@ -75,7 +75,7 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "https://drive.google.com/file/d/1zaeroyWX8cU9LyreqVi6wbdjRi6ikD9M/view?usp=sharing",
+  url: "https://drive.google.com/file/d/15QhLWXSUaR4Qzt4aAFwrkoRVV7aMQ0z9/view",
   icon: <CgAlbum />,
   name: "Resume",
 };
@@ -158,7 +158,7 @@ const companies = [
     title: "Astro",
     alt: "astro image",
     url: "https://www.astro.com.my/",
-    role: "Assiociate Frontend Engineer",
+    role: "Senior Assiociate Frontend Engineer",
     skills: ["React", "Sass", "Redux", "Redux Saga", "StorybookJS"],
     period: "Oct 2022 - Present",
     logo: "/images/astro.png",
@@ -228,7 +228,7 @@ const projects = {
       alt: "eco-design-system",
       summary:
         "Design System built with StorybookJS based on design token and publish as open-source in NPM",
-      link: "https://devdesignsystem.eco.astro.com.my/",
+      link: "https://meraki-design-system.eco.astro.com.my/",
       tech: ["React", "StorybookJS", "SCSS", "Emotion", "Typescript"],
     },
     {
