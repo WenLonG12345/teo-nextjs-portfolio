@@ -75,7 +75,7 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "https://drive.google.com/file/d/15QhLWXSUaR4Qzt4aAFwrkoRVV7aMQ0z9/view",
+  url: "https://drive.google.com/file/d/1Obu0CIWpsB3IlfoUDKZV_caATVPc040O/view",
   icon: <CgAlbum />,
   name: "Resume",
 };
