@@ -20,11 +20,12 @@ import {
   FaGithub,
   FaSass,
   FaAws,
+  FaGoogle,
+  FaCloudflare,
 } from "react-icons/fa";
-import { SiReactquery } from "react-icons/si";
+import { SiReactquery, SiGoogleanalytics } from "react-icons/si";
 import { CgAlbum } from "react-icons/cg";
 import { TbBrandNextjs } from "react-icons/tb";
-import Image from "next/image";
 
 const menuLinks = [
   { name: "About Me", route: "/about" },
@@ -133,22 +134,32 @@ const techStacks = {
       icon: <FaJava size={20} />,
     },
   ],
+  Infra: [
+    {
+      name: "AWS",
+      icon: <FaAws size={20} />,
+    },
+    {
+      name: "Cloudflare",
+      icon: <FaCloudflare size={20} />,
+    },
+  ],
   Others: [
+    {
+      name: "Google Analytics",
+      icon: <SiGoogleanalytics size={20} />,
+    },
+    {
+      name: "Google Search Console",
+      icon: <FaGoogle size={20} />,
+    },
     {
       name: "CI/CD - Fastlane",
       icon: <SiFastlane size={20} />,
     },
     {
-      name: "Firebase",
-      icon: <SiFirebase size={20} />,
-    },
-    {
       name: "Github & GitLab",
       icon: <FaGitAlt size={20} />,
-    },
-    {
-      name: "AWS Service",
-      icon: <FaAws size={20} />,
     },
   ],
 };
@@ -314,7 +325,6 @@ const projects = {
     },
   ],
 };
-
 
 export {
   menuLinks,
